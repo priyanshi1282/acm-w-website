@@ -1,0 +1,69 @@
+:root{
+    --white-color: #fff;
+    --primary-color-1:#0AFFFF;
+    --primary-color-2:#13C6FF;
+    --primary-color-3:#903FFF;
+    --primary-color-4:#FF7BFF;
+    --primary-dark-color : #050B23;
+    --normal-font: 1.2rem;
+    --padding:5% 10%;
+}
+
+
+.home-div{
+    background-image: url('../images/home-mesh-bg-left.png'), url('../images/home-mesh-bg-right.png'),url('../images/home-semi-circle.png');
+    background-repeat: no-repeat;
+    background-position:top left, bottom right,50% -20%;
+    background-size: contain,contain,cover;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.home-container{
+    width: 100%;
+    position: absolute;
+    bottom: 5vh;
+}
+
+.intro{
+    max-width: 800px;
+}
+
+.home-container h3{
+    font-weight: normal;
+    line-height: 2;
+
+}
+
+@media screen and (max-width:600px) {
+    .home-div{
+    background-image: url('../images/home-mesh-bg-left.png'), url('../images/home-mesh-bg-right.png');
+        background-size: 200px, 200px;
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 80px;
+        height: 90vh;
+    }
+
+    .home-container{
+        /* height: 100%;
+        width: 100%; */
+        /* top: 50%;
+        bottom: 50%;
+        transform: translate(0%,-10%); */
+        position: static;
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* align-items: center; */
+        /* justify-content: center !important; */
+    }
+
+    .intro{
+        width: 100%;
+    }
+    
+}

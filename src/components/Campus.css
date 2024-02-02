@@ -1,0 +1,80 @@
+:root{
+    --white-color: #fff;
+    --primary-color-1:#0AFFFF;
+    --primary-color-2:#13C6FF;
+    --primary-color-3:#903FFF;
+    --primary-color-4:#FF7BFF;
+    --primary-dark-color : #050B23;
+    --normal-font: 1.2rem;
+    --padding:5% 10%;
+}
+
+.campus{
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.campus-img{
+    margin-top: 2rem;
+    max-width: 1200px;
+    padding: 1.5rem;
+    border-radius: 30px;
+    border: 2px solid var(--white-color);
+    background-color: rgba(255, 255, 255, 0.09);
+}
+
+.campus-img img{
+    width: 100%;
+    border-radius: 30px;
+}
+
+@keyframes circle-animation{
+   0%{
+        right: 0%;
+        top: 50%;  
+    }
+    25%{
+        right: 25%;
+       top: 40%;
+    }
+    50%{
+        right: 50%;
+        top: 60%;
+    }
+    75%{
+        right: 75%;
+        top: 30%;
+    }
+    100%{
+        right: 80%;
+        top: 10%;
+    }
+}
+
+.circle{
+    position: absolute;
+    z-index: -5;
+    /* width: 250px; */
+    right: -250px;
+    bottom: 0;
+    animation: circle-animation 15s linear infinite alternate;
+}
+
+@media screen and (max-width: 700px) {
+    .campus-img{
+        width: 100%;
+        padding: .5rem;
+        border-radius: 10px;
+    }
+    .campus-img img{
+        border-radius: 10px;
+    }
+    .circle{
+        width: 150px;
+    }
+}
